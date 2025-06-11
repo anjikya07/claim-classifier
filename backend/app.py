@@ -25,6 +25,11 @@ init_db()
 # Load ML model
 model = joblib.load("model.pkl")
 
+
+@app.route("/", methods=["GET"])
+def home():
+    return "Claim Classifier API is running!"
+
 @app.route("/api/classify-claim", methods=["POST"])
 def classify_claim():
     data = request.json
