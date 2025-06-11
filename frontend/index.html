@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Claim Classifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Claim Classifier AI</h1>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#demo">Demo</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>AI-Powered Claim Response Prediction</h2>
+  <p>Instantly know if a claim is eligible for a response using intelligent ML models.</p>
+  <button onclick="document.getElementById('demo').scrollIntoView()">Try Demo</button>
+</section>
+
+<section class="features" id="features">
+  <h3>Key Features</h3>
+  <ul>
+    <li>🔍 Claimant Behavior Analysis</li>
+    <li>🧠 ML-based Decision Engine</li>
+    <li>🔐 Secure Data Handling</li>
+    <li>📈 Custom Confidence Scores</li>
+    <li>⚙️ Easy API Integration</li>
+  </ul>
+</section>
+
+<section class="how-it-works" id="how-it-works">
+  <h3>How It Works</h3>
+  <ul>
+    <li>1️⃣ Enter claim details and claimant info</li>
+    <li>2️⃣ Our ML engine processes the data</li>
+    <li>3️⃣ We provide an instant decision on response eligibility</li>
+  </ul>
+</section>
+
+<section class="demo" id="demo">
+  <h3>Try the Demo</h3>
+  <label for="claim">Claim Description</label>
+  <textarea id="claim" rows="4" placeholder="e.g., Medical expense due to accident..."></textarea>
+
+  <label for="claimsCount">Number of Previous Claims</label>
+  <input type="number" id="claimsCount" />
+
+  <label for="denials">Previous Denials</label>
+  <input type="number" id="denials" />
+
+  <label for="score">Profile Trust Score (0 to 1)</label>
+  <input type="number" step="0.01" max="1" min="0" id="score" />
+
+  <button onclick="classifyClaim()">Check Eligibility</button>
+  <div class="result" id="result"></div>
+</section>
+
+<footer>
+  &copy; 2025 Claim Classifier AI. Built for smart insurance workflows.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
