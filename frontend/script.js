@@ -12,7 +12,7 @@ async function classifyClaim() {
   resultBox.innerText = "Processing...";
 
   try {
-    const response = await fetch('https://your-backend-api.com/api/classify-claim', {
+    const response = await fetch('https://claim-classifier.onrender.com/api/classify-claim', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
